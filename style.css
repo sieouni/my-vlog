@@ -1,0 +1,88 @@
+style.css
+/* 1. 전체적인 글꼴과 배경 설정 */
+body {
+    font-family: 'Arial', sans-serif; /* 나중에 귀여운 폰트로 바꾸셔도 돼요! */
+    background-color: #fff5f7; /* 아주 연한 분홍색 배경 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. 상단 레이스/점선 장식 */
+.top-deco {
+    height: 10px;
+    border-bottom: 2px dashed #b1aeae; /* 분홍색 점선 */
+    margin-bottom: 20px;
+}
+ 
+/* 3. 메인 레이아웃 (왼쪽 메뉴 + 오른쪽 본문) */
+.container {
+    display: flex; /* 가로로 배치 */
+    height: 100vh; /* 화면 높이를 꽉 채움 */
+}
+
+/* 4. 왼쪽 메뉴 바 스타일 */
+.sidebar {
+    width: 200px;
+    padding: 20px;
+    border-right: 2px dashed #b1aeae; /* 메뉴와 본문 사이의 점선 */
+}
+
+.menu-item {
+    display: block;
+    text-decoration: none; /* 밑줄 제거 */
+    color: #666;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    color: #FFB6C1; /* 마우스 올리면 진한 분홍색 */
+    transform: scale(1.1); /* 살짝 커지는 효과 */
+}
+
+.menu-item.active {
+    color: #FF5C9D;
+    font-weight: bold;
+}
+
+/* 5. 오른쪽 본문 영역 스타일 */
+.content {
+    flex: 1; /* 남은 공간을 다 차지함 */
+    padding: 40px;
+    background-color: white; /* 본문은 하얀색 종이 느낌 */
+}
+
+/* 6. 일기 제목과 날짜 스타일 */
+.content-header {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    color: #FF8EAD; /* 일기 제목 색상 */
+    font-weight: bold;
+}
+
+.dashed-line {
+    border-bottom: 2px dashed (142, 140, 140);
+    margin-top: 10px;
+}
+
+/* 7. 사진 스타일 */
+.post-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* 사진 모서리를 둥글게 */
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+}
+
+/* 8. iframe 전용 스타일 (중요!) */
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
